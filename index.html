@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#sub{
+    width: 170px;
+    height: 40px;
+    background-color: rgb(56, 170, 56);
+    border: none;
+    color: aliceblue;
+    font-weight: bolder;
+    transition: all 0.5s;
+    margin-left: 40%;
+
+}
+
+.form{
+    width: 800px;
+    background-color: antiquewhite;
+}
+
+.form h1  {
+    margin-left: 15%;
+}
+
+.form h4{
+    margin-left: 15%;
+}
+
+.form h5{
+    margin-left: 15%;
+}
+
+.form input{
+    margin-left: 15%;
+}
+
+.form label{
+    margin-left: 15% ;
+}
+
+.form textarea{
+    margin-left: 15%;
+    width: 550px;
+    height: 150px;
+}
+#sub:hover{
+    background-color:rgb(48, 142, 48);
+}
+
+.abc{
+    height: 30px;
+    width:250px;
+}
+p{
+    margin-left: 15%;
+    color: white;
+    background-color: rgb(255, 0, 0);
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+
+
+/* #formdetails{
+    height: 500px;
+    width: 500px;
+    border: 2px solid black;
+} */
+
+    </style>
+</head>
+<body>
+
+
+    <div class="form">
+        <form action="" onsubmit="return validate()">
+            <h1>Registration Form</h1>
+            <h4 style="color: gray; font-weight: bolder;">Fill out the form carefully for registration</h4>
+            <br>
+            <h5 style="font-size: 25px;">Student Name</h5>
+            <input type="text" id="fname" name="fname" class="abc"><br><br>
+            <label for="fname" >First Name</label><br>
+            <p id="name_error">Enter Your First Name!</p>
+            <br>
+            <input type="text" class="abc" id="mname"><br><br>
+            <label for="mname">Middle Name</label><br>
+            <p id="error2">Enter Your Middle Name!</p>
+            <br>
+            <input type="text" class="abc" id="lname"><br><br>
+            <label for="lname">Last Name</label><br>
+            <p id="name_error3">Enter Your Last Name!</p>
+            <br>
+            <br>
+            <h5 style="font-size: 25px;">Gender</h5>
+            <input type="radio" name="gender" id="male" value="Male" class="g1">Male
+            <input type="radio" name="gender" id="female" value="Female" class="g1">Female
+            <input type="radio" name="gender" id="Other" value="Other" class="g1">Others
+            <br>
+            <h5 style="font-size: 25px;">Subjects</h5>
+            <input type="checkbox" name="subject" value="Science" class="g2">HTML
+            <input type="checkbox" name="subject" value="Maths" class="g2">Javascript
+            <input type="checkbox" name="subject" value="Maths" class="g2">Css
+            <input type="checkbox" name="subject" value="Maths" class="g2">Python
+            <br>
+            <br>
+            <br>
+            <label for="sack" style="font-size: 25px ; font-weight: bolder;">Student's E-mail <b style="color: red;">*</b></label><br><br>
+            <input type="" id="sack" name="sack" class="abc" placeholder="example@example.com"><br><br>
+            <p id="error4">Please enter valid Email</p>
+            <p id="error5">please Enter Your Email</p>
+            <br>
+            <br>
+            
+            <label for="no" style="font-size: 25px ; font-weight: bolder;">Mobile Number <b style="color: red;">*</b></label><br><br>
+            <input type="number" id="no" name="no" class="abc"><br><br>
+            <p id="error6">Please Dont leave the space blank!</p>
+            <p id="error7">Please enter valid number!</p>
+            <br>
+            <br>
+            
+            <label for="wno" style="font-size: 25px ; font-weight: bolder;">Work Number</label><br><br>
+            <input type="number" id="wno" name="wno" class="abc"><br><br>
+            <br>
+            <br>
+            
+            <label for="pass" style="font-size: 25px ; font-weight: bolder;">Password <b style="color: red;">*</b></label><br><br>
+            <input type="password" id="pass" name="pass" class="abc" placeholder="Enter Password"><br><br>
+            <p id="error8">The Password is Blank</p>
+            <p id="error9">At least one upper case English letter </p>
+            <p id="error10">At least one lower case English letter </p>
+            <p id="error11">At least one digit</p>
+            <p id="error12">At least one special character</p>
+            <br>
+            <br>
+            
+            <label for="comp" style="font-size: 25px ; font-weight: bolder;">Company <b style="color: red;">*</b></label><br><br>
+            <input type="text" id="comp" name="comp" class="abc"><br><br>
+            <p id="cam">Space Cannot Be Blank!</p>
+            <br>
+            <br>
+            <label for="ad" style="font-size: 25px ; font-weight: bolder;">Additional Comment</label><br><br>
+            <textarea name="ad" id="ad" cols="30" rows="10"></textarea>
+            <br>
+            <br>
+            <br>
+            <br>
+            <input type="submit" value="submit" id="sub" onclick="subi()">
+            <br>
+            <br>
+            <br>
+            
+
+
+            
+
+
+
+        </form>
+    </div>
+
+
+
+
+        <div id="formdetails">
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+
+
+
+       
+
+
+        function validate(){
+            var u=document.getElementById("formdetails")
+            var a=document.getElementById("fname")
+            var x=document.getElementById("name_error")
+            var b=document.getElementById("mname")
+            var y=document.getElementById("error2")
+            var c=document.getElementById("lname")
+            var z=document.getElementById("name_error3")
+            var d=document.getElementsByClassName("g2")
+            var e=document.getElementsByClassName("g1")
+            var f=document.getElementById("sack")
+            var g=document.getElementById("error4")
+            var h=document.getElementById("error5")
+            var i=document.getElementById("no")
+            var j=document.getElementById("error6")
+            var k=document.getElementById("error7")
+            var l=document.getElementById("comp")
+            var s=document.getElementById("cam")
+            var m=document.getElementById("error8")
+            var n=document.getElementById("pass")
+            var o=document.getElementById("error9")
+            var p=document.getElementById("error10")
+            var q=document.getElementById("error11")
+            var r=document.getElementById("error12")
+            var pass=   /^(?=.*?[A-Z])/
+            var pass2=  /^(?=.*?[a-z])/
+            var pass3=  /^(?=.*?[0-9])/
+            var pass4=  /^(?=.*?[#?!@$%^&*-])/
+            flag=true;
+            flag2=false;
+
+            if(a.value.trim()==""){
+                x.style.display="block"
+                x.style.display="flex"
+                flag=false;
+            }else{
+                x.style.display="none"
+               
+
+                
+                // y.style.display="block"
+            }
+            
+            if(b.value.trim()==""){
+                y.style.display="block"
+                y.style.display="flex"
+                flag=false
+            }else{
+                y.style.display="none"
+                
+
+
+
+                // document.write("Middle name: ",u.innerText=b.value,"<br>")
+
+
+                
+
+            }
+            if(c.value.trim()==""){
+                z.style.display="block"
+                z.style.display="flex"
+                flag=false
+            }else{
+                z.style.display="none"
+
+
+                // document.write("Last name: ",u.innerText=c.value,"<br>")
+
+            }
+            
+            // for(i=0;i<e.length;i++){
+            //     if(e[i].type=="radio" && d[i].type=="checkbox"){
+            //         if(e[i].checked==true && d[i].checked==true){
+            //             // document.write(u.innerText=e[i].value)
+            //             // d.style.display="none"
+
+            //             flag2=true
+            //         }
+            //     }
+            // }
+
+            // if(flag2==false){
+            //     alert("Please Select required Fields")
+            // }
+
+
+
+            var email_regex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+            if(f.value.trim()==""){
+               h.style.display="block"
+               g.style.display="none"
+               h.style.display="flex"
+
+                flag=false
+            }else if(!f.value.match(email_regex)){
+                g.style.display="block"
+                h.style.display="none"
+                g.style.display="flex"
+
+                flag=false
+            }else{
+               h.style.display="none"
+               g.style.display="none"
+            }
+
+
+            //mobile no 
+
+            if(i.value.trim()==""){
+                j.style.display="block"
+                flag=false
+            }else if(i.value.length<=10){
+                k.style.display="block"
+                j.style.display="none"
+                flag=false
+
+            }else{
+                j.style.display="none"
+                k.style.display="none"
+            }
+
+
+            if(n.value.trim()==""){
+                m.style.display="block"
+                m.style.display="flex"
+                flag=false;
+            }else if(!n.value.match(pass)){
+                o.style.display="block"
+                o.style.display="flex"
+                flag=false;
+                m.style.display="none"
+
+            }else if(!n.value.match(pass2)){
+                o.style.display="none"
+                p.style.display="block"
+                m.style.display="none"
+                flag=false
+            }else if(!n.value.match(pass3)){
+                q.style.display="block"
+                q.style.display="flex"
+                m.style.display="none"
+                o.style.display="none"
+                p.style.display="none"
+                flag=false
+
+            }else if(!n.value.match(pass4)){
+                r.style.display="block"
+                r.style.display="flex"
+                m.style.display="none"
+                o.style.display="none"
+                p.style.display="none"
+                q.style.display="none"
+                flag=false
+
+            }
+            
+            
+            
+            else{
+                m.style.display="none"
+                o.style.display="none"
+                p.style.display="none"
+                q.style.display="none"
+                r.style.display="none"
+                
+            }
+
+            if(l.value.trim()==""){
+                s.style.display="block"
+                s.style.display="flex"
+                
+            }else{
+                s.style.display="none"
+                
+            }
+
+
+
+
+
+            return flag2,flag;
+
+
+        }
+
+
+
+    </script>
+</body>
+</html>
